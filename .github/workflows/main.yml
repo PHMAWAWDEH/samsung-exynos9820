@@ -57,7 +57,7 @@ jobs:
                        model=${{ matrix.model }} \
                        name="NightBloom"        \
                        toolchain=$TOOLCHAIN      \
-                       +magisk=delta                   \
+                       +magisk=canary                  \
                        os_patch_level=2023-04                   \
                        +nohardening              \
                        +performance                      \
@@ -67,6 +67,10 @@ jobs:
                        +ntfs                     \
                        +force_dex_wqhd           \
                        +morosound                \
+                       +always_permit            \
+                       +io_zen                    \
+                       +fp_boost                 \
+                       +nodebug                  \
                        +boeffla_wl_blocker       \
           2>&1 | tee config.info
 
