@@ -537,7 +537,7 @@ def parse_args():
     return configs
 
 def setup_env(features, configs, model):
-    set_env(ARCH='arm64', PLATFORM_VERSION='11', ANDROID_MAJOR_VERSION='r')
+    set_env(ARCH='arm64', PLATFORM_VERSION='14', ANDROID_MAJOR_VERSION='u')
     set_env(KBUILD_BUILD_TIMESTAMP='')
     if features['fake_config']:
         defconfig = os.path.join('arch/arm64/configs', models[model]['config'])
@@ -564,7 +564,7 @@ def config_info(configs, model):
     if 'os_patch_level' in configs:
         print('OS Patch Level: ' + configs['os_patch_level'])
     else:
-        with open('cruel/build.mkbootimg.' + model, 'r') as fh:
+        with open('cruel/build.mkbootimg.' + model, 'u') as fh:
             for line in fh:
                 (arg, val) = line.split('=', 1)
                 val = val.rstrip()
