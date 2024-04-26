@@ -58,7 +58,7 @@ jobs:
                        name="NightBloom"        \
                        toolchain=$TOOLCHAIN      \
                        +magisk=canary                  \
-                       os_patch_level=2023-04                   \
+                       os_patch_level=2024-04                   \
                        +nohardening              \
                        +performance                      \
                        +wireguard                \
